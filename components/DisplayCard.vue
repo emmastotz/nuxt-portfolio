@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white rounded-lg shadow max-w-6xl divide-y">
+  <div class="bg-white rounded-lg shadow max-w-2xl divide-y mx-auto">
       <div class="px-6 py-6">
         <slot name="title" />
       </div>
