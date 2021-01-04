@@ -1,13 +1,13 @@
 <template>
-  <div class="bg-gradient-to-bl from-indigo-500 via-green-300 to-blue-400">
+  <div class="bg-yellow-900">
     <div>
-      <NavigationBar />
+      <HeaderBar />
     </div>
     <!-- Overlay -->
     <main class="-mt-32">
       <div class="max-w-7xl mx-auto pb-12 px-4 sm:px-6 lg:px-8">
         <div class="bg-gray-200 rounded-lg shadow px-5 py-6 sm:px-6">
-          <div class="rounded-lg min-h-screen">
+          <div class="rounded-lg">
             <Nuxt />
           </div>
         </div>
@@ -20,12 +20,12 @@
 </template>
 
 <script>
-import NavigationBar from '@/components/HeaderBar.vue'
+import HeaderBar from '@/components/HeaderBar.vue'
 import FooterBar from '@/components/FooterBar.vue'
 
 export default {
   components: {
-    NavigationBar,
+    HeaderBar,
     FooterBar,
   }
 }
