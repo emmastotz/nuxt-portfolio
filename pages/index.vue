@@ -1,7 +1,7 @@
 <template>
   <div class="mx-8 my-8 space-y-8">
-    <div class="flex flex-col justify-between items-center space-y-8 lg:flex-row lg:space-y-0 lg:space-x-8 xl:justify-around">
-      <div class="flex-shrink-0 rounded-full shadow-lg p-5 bg-white">
+    <div class="flex flex-col justify-between items-center space-y-8 md:items-end lg:flex-row lg:space-y-0 lg:space-x-8">
+      <div class="flex-shrink-0 rounded-full shadow-lg p-5 bg-white md:-mt-36">
         <img src="/images/emma.jpg" class="object-cover rounded-full h-32 w-auto lg:h-40 border-2 border-gray-200"/>
       </div>
       <DisplayCard> 
