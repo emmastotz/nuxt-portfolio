@@ -50,7 +50,7 @@
 			<!-- Header -->
 			<header class="py-10">
 				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<h1 class="text-3xl font-bold text-white capitalize">
+					<h1 class="text-3xl font-bold text-white capitalize font-display tracking-wider">
 						{{ headerText }}
 					</h1>
 				</div>
@@ -79,7 +79,7 @@ export default {
 	computed: {
 		headerText() {
 			if(this.$route.path === '/'){
-				return 'About Me'
+				return 'Designer + Frontend Developer'
 			}
 			const path = this.$route.path.split('/')
 			return path[1]
