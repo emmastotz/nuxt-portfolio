@@ -8,6 +8,10 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    fontFamily: {
+      'display': 'Abril Fatface',
+      'body': 'Open Sans'
+    },
     extend: {}
   },
   variants: {
