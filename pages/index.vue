@@ -44,7 +44,7 @@
       </DisplayCard>
       <DisplayCard> 
         <template #title>
-          Frontend Developer
+          Front-end Developer
         </template>
         <template #content>
           <div class="grid gap-6">
