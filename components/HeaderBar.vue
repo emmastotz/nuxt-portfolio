@@ -7,7 +7,9 @@
 						<div class="flex items-center justify-between h-16 px-4 sm:px-0">
 							<!-- Logo -->
 							<div class="flex-shrink-0">
-								<LogoSvg class="h-10 w-10 fill-current text-white"/>
+								<div class="rounded-full bg-gray-200">
+									<LogoSvg class="h-10 w-10 fill-current text-gray-800"/>
+								</div>
 							</div>
 							<div class="hidden md:block">
 								<div class="flex items-baseline space-x-4">
@@ -53,7 +55,7 @@
 					<h1 class="text-3xl md:text-4xl font-bold text-white font-display">
 						{{ headerText.title }}
 					</h1>
-					<p v-if="headerText.subtitle" class="text-lg text-gray-500">{{ headerText.subtitle }}</p>
+					<p v-if="headerText.subtitle" class="text-gray-500 lg:text-lg">{{ headerText.subtitle }}</p>
 				</div>
 			</header>
 		</div>
@@ -87,7 +89,8 @@ export default {
 					}
 				case '/portfolio': 
 					return {
-						title: 'My Recent Work'
+						title: 'My Recent Work',
+						subtitle:'Simple ways in which I have inspired wonder with code and design.' 
 					}
 				case '/contact': 					
 					return {
