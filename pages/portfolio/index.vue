@@ -1,6 +1,9 @@
 <template>
-  <div class="grid grid-cols-3 space-x-6">
-    <PortfolioCard v-for="project in projects" :key="project.id" v-bind="{ project }" />
+  <div class="grid grid-cols-1 gap-4">
+    <h2 class="text-center text-gray-800 text-sm font-body font-semibold uppercase tracking-widest md:text-left">Professional Projects</h2>
+    <div class="grid gap-6 md:grid-cols-3 md:items-center lg:gap-8 xl:gap-10">
+      <PortfolioCard v-for="project in projects" :key="project.id" v-bind="{ project }" />
+    </div>
   </div>
 </template>
 
@@ -33,7 +36,7 @@ export default {
         {
           id: 3,
           name: 'Virginia Distillery Co.',
-          description: ['Brand development', 'Marketing material development', 'Product design'],
+          description: ['Brand development', 'Marketing material development'],
           link: '/portfolio/virginia-distillery-co',
           image: '/images/distillery.jpg',
           date: 'Sep 2016 - Oct 2019',
