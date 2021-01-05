@@ -13,38 +13,58 @@
 							</div>
 							<div class="hidden md:block">
 								<div class="flex items-baseline space-x-4">
-									<nuxt-link to="/" class="text-gray-300 hover:bg-gray-700 hover:text-white focus:bg-gray-900 focus:text-white px-3 py-2 rounded-md text-sm font-medium">About Me</nuxt-link>
+									<nuxt-link to="/" class="text-gray-300 hover:bg-gray-700 hover:text-white focus:bg-gray-900 focus:text-white px-3 py-2 rounded-md text-sm font-medium font-body">About Me</nuxt-link>
 
-									<nuxt-link to="/portfolio" class="text-gray-300 hover:bg-gray-700 hover:text-white focus:bg-gray-900 focus:text-white px-3 py-2 rounded-md text-sm font-medium">Portfolio</nuxt-link>
+									<nuxt-link to="/portfolio" class="text-gray-300 hover:bg-gray-700 hover:text-white focus:bg-gray-900 focus:text-white px-3 py-2 rounded-md text-sm font-medium font-body">Portfolio</nuxt-link>
 
-									<nuxt-link to="/contact" class="text-gray-300 hover:bg-gray-700 hover:text-white focus:bg-gray-900 focus:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</nuxt-link>
+									<nuxt-link to="/contact" class="text-gray-300 hover:bg-gray-700 hover:text-white focus:bg-gray-900 focus:text-white px-3 py-2 rounded-md text-sm font-medium font-body">Contact</nuxt-link>
 								</div>
 							</div>
 							<div class="-mr-2 flex md:hidden">
 								<!-- Mobile menu button -->
-								<button class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" @click="toggle()">
+								<button class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" @click="toggle()">
 									<span class="sr-only">Open main menu</span>
-									<MenuSvg 
-										class="w-6 h-auto text-white" 
-										:class="isOpen ? 'hidden' : 'block'" 
-									/>
-									<XSvg 
-										class="w-6 h-auto text-white" 
+									<!-- Menu Svg -->
+									<svg 
+										class="text-white h-6 w-auto"
+										:class="isOpen ? 'hidden' : 'block'"  
+										xmlns="http://www.w3.org/2000/svg" 
+										viewBox="0 0 20 20" 
+										fill="currentColor"
+									>
+										<path 
+											fill-rule="evenodd" 
+											d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" 
+										/>
+									</svg>
+									<!-- X Svg -->
+									<svg 
+										class="text-white h-6 w-auto"
 										:class="isOpen ? 'block' : 'hidden'" 
-									/>
+										xmlns="http://www.w3.org/2000/svg" 
+										viewBox="0 0 20 20" 
+										fill="currentColor"
+									>
+										<path 
+											fill-rule="evenodd" 
+											d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" 
+											clip-rule="evenodd" 
+										/>
+									</svg>
 								</button>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="hidden border-b border-gray-700 md:hidden" :class="isOpen ? 'block' : 'hidden'">
+				<!-- Flyout Menu -->
+				<div class="border-b border-gray-700 items-end" :class="isOpen ? 'block' : 'hidden'">
 					<div class="px-2 py-3 space-y-1 sm:px-3">
-						<nuxt-link to="/" class="text-gray-300 hover:bg-gray-700 hover:text-white focus:bg-gray-900 focus:text-white block px-3 py-2 rounded-md text-base font-medium">About Me</nuxt-link>
+						<nuxt-link to="/" class="text-gray-300 hover:bg-gray-700 hover:text-white focus:bg-gray-900 focus:text-white block px-3 py-2 rounded-md text-base font-medium font-body">About Me</nuxt-link>
 
-						<nuxt-link to="/portfolio" class="text-gray-300 hover:bg-gray-700 hover:text-white focus:bg-gray-900 focus:text-white block px-3 py-2 rounded-md text-base font-medium">Portfolio</nuxt-link>
+						<nuxt-link to="/portfolio" class="text-gray-300 hover:bg-gray-700 hover:text-white focus:bg-gray-900 focus:text-white block px-3 py-2 rounded-md text-base font-medium font-body">Portfolio</nuxt-link>
 
-						<nuxt-link to="/contact" class="text-gray-300 hover:bg-gray-700 hover:text-white focus:bg-gray-900 focus:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</nuxt-link>
+						<nuxt-link to="/contact" class="text-gray-300 hover:bg-gray-700 hover:text-white focus:bg-gray-900 focus:text-white block px-3 py-2 rounded-md text-base font-medium font-body">Contact</nuxt-link>
 					</div>
 				</div>
 			</nav>
@@ -85,12 +105,12 @@ export default {
 				case '/': 
 					return { 
 						title: 'Designer + Front-end Developer', 
-						subtitle:'I design and code beautifully simple things, and I love what I do.' 
+						subtitle:'I design and code beautifully simple things. I love what I do.' 
 					}
 				case '/portfolio': 
 					return {
 						title: 'My Recent Work',
-						subtitle:'Simple ways in which I have inspired wonder with code and design.' 
+						subtitle:'Simple ways in which I have inspired wonder through code + design.' 
 					}
 				case '/contact': 					
 					return {
