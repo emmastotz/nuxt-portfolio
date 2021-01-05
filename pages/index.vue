@@ -35,7 +35,7 @@
               <span class="text-yellow-900 font-semibold">Design Tools:</span>
               <li>Figma</li>
               <li>Adobe Creative Cloud</li>
-              <li>Balsamiq</li>
+              <li>Gimp</li>
               <li>Pen & Paper</li>
               <li>Sketch</li>
             </ul>
