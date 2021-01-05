@@ -6,12 +6,10 @@
 
 <script>
 import PortfolioCard from '@/components/PortfolioCard.vue'
-import WhitehawkSvg from '@/components/icons/WhitehawkSvg.vue'
 
 export default {
   components: {
     PortfolioCard,
-    WhitehawkSvg,
   },
   data() {
     return {
